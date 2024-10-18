@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border: none;
+        }
+        header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 10px;
+            border: 1px black solid;
+            background-color: rgb(119, 21, 21);
+            box-shadow:  0px 8px black
+        }
+        .filter{
+            display: flex;
+            align-items: center;
+            padding: 2px;
+        }
+        form input{
+            font-size: 1.3rem;
+        }
+        form{
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: white;
+            display: flex;
+        }
+        .card{
+           display: flex;
+           flex-direction: column;
+           width: 320px;
+           padding: 8px;
+           border-radius: 8px;
+           justify-content: center;
+           align-items: flex-start;
+           position: relative;
+           gap: 8px;
+           box-shadow: 0px 0px 8px black;
+           background-color: indigo;
+
+        }
+        .card img{
+            width: 100%;
+        }
+        .source{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: rgba(0, 0, 0, 0.804);
+            color: white;
+            border-radius: 10px;
+            padding: 3px 7px;
+
+        }
+        main, #cards{
+            margin-top: ;
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: center;
+            gap: 20px;
+            background-color: rgb(119, 21, 21);
+            padding-top: 20px;
+            padding-bottom: 20px;
+
+        }
+        .filter{
+            background-color: rgb(119, 21, 21);
+        }
+        form{
+            background-color: rgb(119, 21, 21);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My news</h1>
+        
+        <form class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search news..." required>
+            <button type="submit" class="search-button">
+                search
+            </button>
+        </form>
+        <div class="filter">
+            <form class="filters">
+                <label for="dropdown">
+                    <select name="filter" id="dropdown">
+                        <option value="News 1"> News 1</option>
+                        <option value="News 2"> News 2</option>
+                        <option value="News 3">News 3</option>
+                    </select>
+                </label>
+               <div class="lang">
+                <label for="dropdown" id="language">
+                    <select name="filter" id="dropdown">
+                    </select>
+                </label>
+               </div>
+                <label for="dropdown">
+                    <select name="filter" id="dropdown">
+                        <option value="News 1"> News 1</option>
+                        <option value="News 2"> News 2</option>
+                        <option value="News 3">News 3</option>
+                    </select>
+                </label>
+            </form>
+        </div>
+    </header> 
+    <main>
+        <div id="cards">
+        </div>
+    </main>
+    <script src="javas.js" type="module"></script>  
+
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+@media(max-width: 660px){
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media(max-width: 660px){
+    .search-bar{
+        font-size: 0.5rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

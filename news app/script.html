@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Language Dropdown</title>
+</head>
+<body>
+  <label for="languages">Choose a language:</label>
+  <select id="languages">
+    <!-- Options will be dynamically added here -->
+  </select>
+  
+  <p id="selected-language">You have selected: None</p>
+
+  <script>
+    // Step 1: Create an object with language codes and their corresponding languages
+    const languages = {
+      en: 'English',
+      fr: 'French',
+      es: 'Spanish',
+      de: 'German',
+      it: 'Italian',
+      jp: 'Japanese',
+      cn: 'Chinese'
+    };
+
+    // Step 2: Get the select element
+    const languageSelect = document.getElementById('languages');
+
+    // Step 3: Iterate over the languages object
+    for (const [code, name] of Object.entries(languages)) {
+      // Create a new option element
+      const option = document.createElement('option');
+      
+      // Set the value and inner text of the option
+      option.value = code;  // Set language code as the value
+      option.textContent = name;  // Set language name as the display text
+
+      // Step 4: Append the option to the select element
+      languageSelect.appendChild(option);
+    }
+
+    // Step 5: Add event listener to update the paragraph when a language is selected
+    languageSelect.addEventListener('change', function() {
+      const selectedLanguage = languageSelect.value;
+      const selectedLanguageName = languages[selectedLanguage];
+      
+      document.getElementById('selected-language').textContent = 'You have selected: ' + selectedLanguageName;
+    });
+  </script>
+</body>
+</html>
